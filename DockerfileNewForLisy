@@ -1,0 +1,10 @@
+FROM scratch
+
+ARG TARGETPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+
+WORKDIR /
+VOLUME /var/lib/octopus/adaptors
+COPY octopus_linux_amd64 /octopus
+ENTRYPOINT ["/octopus"]
